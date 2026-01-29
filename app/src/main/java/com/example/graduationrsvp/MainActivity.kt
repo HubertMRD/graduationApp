@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -53,7 +54,8 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun HouseScreen(modifier: Modifier = Modifier) {
     Column(
-        modifier = modifier.fillMaxHeight(),
+        modifier = modifier.fillMaxHeight().background(Color(0xFFFFFDFD)),
+       // modifier = modifier.fillMaxHeight(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceEvenly
     ) {
@@ -85,10 +87,7 @@ fun HouseScreen(modifier: Modifier = Modifier) {
                 text = "Open house - January 30 - At Noon",
                 fontSize = 20.sp
             )
-            Text(
-                text = "IDK",
-                fontSize = 20.sp
-            )
+
         }
         OpenHouse()
     }
