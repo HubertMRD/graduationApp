@@ -53,6 +53,8 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun HouseScreen(modifier: Modifier = Modifier) {
+    var isChecked by remember { mutableStateOf(true) }
+    val message = if (isChecked) "I'll be there!" else "Sorry I can't be there."
     Column(
         modifier = modifier.fillMaxHeight().background(Color(0xFFFFFDFD)),
        // modifier = modifier.fillMaxHeight(),
@@ -98,7 +100,6 @@ fun HouseScreen(modifier: Modifier = Modifier) {
 fun OpenHouse (modifier: Modifier = Modifier) {
     var isChecked by remember { mutableStateOf(true) }
     val message = if (isChecked) "I'll be there!" else "Sorry I can't be there."
-
     Column(
         modifier = modifier,
         horizontalAlignment = Alignment.CenterHorizontally
@@ -115,6 +116,9 @@ fun OpenHouse (modifier: Modifier = Modifier) {
         )
     }
 }
+
+
+
 @Preview(showBackground = true)
 @Composable
 fun GradPreview() {
